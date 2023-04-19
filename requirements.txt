@@ -3,3 +3,6 @@ fastapi==0.95.1 #https://fastapi.tiangolo.com/
 
 #server
 uvicorn==0.21.1 #https://www.uvicorn.org/
+
+#orm
+SQLAlchemy
