@@ -1,12 +1,6 @@
 from fastapi import FastAPI
+from app.api.endpoints import router as v1_router
 
 app = FastAPI()
 
-
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-@app.post("/login")
-async def login():
-    return {"user_name": "password"}
+app.include_router(router=v1_router.router, prefix="/api/v1")
